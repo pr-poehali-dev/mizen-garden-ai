@@ -51,7 +51,7 @@ const Index = () => {
             <button className="relative text-primary hover:text-accent transition-colors">
               <Icon name="ShoppingBag" size={22} />
             </button>
-            <Button className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-5">Создать проект</Button>
+            <a href="/create" className="hidden sm:block"><Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-5">Создать проект</Button></a>
             <button className="md:hidden text-primary" onClick={() => setMenuOpen(!menuOpen)}>
               <Icon name={menuOpen ? 'X' : 'Menu'} size={24} />
             </button>
@@ -84,10 +84,12 @@ const Index = () => {
               Загрузите фото участка — мы подберём растения и покажем дизайн.
             </p>
             <div className="flex flex-wrap gap-4 mt-9 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-8 h-14 text-base font-semibold hover-scale">
-                Создать проект
-                <Icon name="ArrowRight" size={20} className="ml-1" />
-              </Button>
+              <a href="/create">
+                <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-8 h-14 text-base font-semibold hover-scale">
+                  Создать проект
+                  <Icon name="ArrowRight" size={20} className="ml-1" />
+                </Button>
+              </a>
               <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-base bg-transparent border-background/40 text-background hover:bg-background/10 hover:text-background">
                 Смотреть примеры
               </Button>
@@ -201,10 +203,12 @@ const Index = () => {
             <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-secondary/20 blur-3xl" />
             <h2 className="font-display text-4xl md:text-6xl font-bold text-background relative">Готовы создать свой сад?</h2>
             <p className="text-background/70 mt-4 max-w-md mx-auto relative">Загрузите фото участка прямо сейчас — это бесплатно.</p>
-            <Button size="lg" className="mt-9 bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-10 h-14 text-base font-semibold hover-scale relative">
-              Создать проект
-              <Icon name="ArrowRight" size={20} className="ml-1" />
-            </Button>
+            <a href="/create" className="inline-block mt-9 relative">
+              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-10 h-14 text-base font-semibold hover-scale">
+                Создать проект
+                <Icon name="ArrowRight" size={20} className="ml-1" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
